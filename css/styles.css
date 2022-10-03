@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+:root {
+    --primary-color: hsl(330, 87%, 17%);
+    --secondary-color: hsla(203,100%,13%,1);
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: none;
+    /* overflow-x: hidden; */
+}
+
+/* start back-to-top */
+.btn-backtotops {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+}
+/* end back-to-top */
+
+/* ------------------------START HEADER--------------------------- */
+header {
+    height: 100vh;
+    background: linear-gradient(
+        30deg,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0.5)
+    ), url("../assets/img/banner/banner2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /**/
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Start navbar */
+nav {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--secondary-color));
+    padding: 20px 30px;
+    transition: all 0.5s ease;
+}
+.navmenus{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), var(--secondary-color));
+    padding: 0 30px;
+}
+.menuItems {
+    color: #eee;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+.menuItems:hover {
+    color:#00ffff;
+}
+
+.lines1, .lines2, .lines3 {
+    width: 25px;
+    height: 3px;
+    margin: 6px;
+    transition: all 0.5s ease;
+}
+.navbtns.crossxs .lines1 {
+    transform: translate(0,9.5px) rotate(45deg);
+}
+.navbtns.crossxs .lines3 {
+    transform: translate(0,-9.5px) rotate(-45deg);
+}
+.navbtns.crossxs .lines2 {
+    transform-origin: center;
+    transform: scale(0);
+}
+
+/* Start banner */
+.banners {
+    width: 100%;
+    /* position: absolute;
+    top:50%; 
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    animation-name: bananni;
+    animation-duration: 2s;
+}
+.bannersheaders{
+    animation-name: bananni;
+    animation-duration: 2s;
+}
+.bannersparagraphs{
+    animation-name: bananni;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes bananni {
+    0% {
+        transform: translate(-50%,-50%);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%,-50%);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* End banner */
+
+/* End navbar */
+/* ------------------------END HEADER--------------------------- */
+
+
+/*----------------- Start About us Section -----------------------------*/
+.aboutuss {
+    position: relative;
+    background: linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    ), url("../assets/img/banner/banner2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.aboutuss .lines{
+    width: 30%;
+    height: 1.2px;
+    background-color: white;
+    margin-bottom: 3px;
+}
+.aboutuss .lines:nth-of-type(2) {
+    width: 20%;
+    height: 1px;
+}
+.aboutuss .lines:nth-of-type(3) {
+    width: 10%;
+    height: 0.5px;
+}
+.aboutuss h5{
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-left: 5px solid red;
+}
+.aboutuss h5 + p {
+    text-align: left;
+    margin: 20px 0;
+}
+.aboutuss img{
+    position: absolute;
+    bottom: 0;
+    width:300px;
+}
+
+/*----------------- End About us Section -----------------------------*/
+
+
+/*----------------- Start Properties Section -----------------------------*/
+.titles {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    padding: 5px 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.titles::before, .titles::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+.titles::before {
+    left: 0;
+    bottom: 0;
+    border-left: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+.titles::after {
+    right: 0;
+    top: 0;
+    border-right: 3px solid var(--primary-color);
+    border-top: 3px solid var(--primary-color);
+}
+
+.propertylists{
+    color: #777;
+    cursor: pointer;
+}
+
+.activeitems{
+    color: var(--primary-color);
+}
+
+/*----------------- End Properties Section -----------------------------*/
+
+/*----------------- Start Adv Section -----------------------------*/
+.missions{
+    background-color: var(--secondary-color);
+}
+
+.fromlefts{
+    animation: fromleftani 3s ease;
+}
+
+.fromrights {
+    animation: fromrightani 3s ease;
+}
+
+@keyframes fromleftani {
+    0%{
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fromrightani {
+    from{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/*----------------- End Adv Section -----------------------------*/
+
+
+/*----------------- Start Services Section -----------------------------*/
+.services {
+    background: linear-gradient(
+        200deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+}
+
+.servicecards{
+    position: relative;
+
+    white-space: pre-wrap; /* ****for content in services::before */
+
+    overflow: hidden;
+}
+
+.servicecards::before {
+    content: 'You may need our services ? \A Try and upgrade your living environment.\A \f004 \f004 \f004';
+    font-family: "Font Awesome 5 Free";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    text-align: center;
+    line-height: 2;
+    z-index: 1;
+}
+
+.servicecards:hover::before{
+    display: none;
+}
+
+.servicecards img {
+    transition: transform 0.5s;
+}
+
+.servicecards:hover img{
+    transform: scale(1.1);
+}
+
+.servicetexts {
+    position: absolute;
+    right:0;
+    bottom:10%;
+    width: 40%;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.servicecards:hover .servicetexts {
+    font-weight: 550;
+    opacity: 1;
+}
+
+/*----------------- End Services Section -----------------------------*/
+
+
+/*----------------- Start CLient Section -----------------------------*/
+ul.clientlists {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+ul.clientlists li {
+    background-color: #f4f4f4;
+    padding: 1rem 1.5rem;
+    margin: auto;
+    border: 5px solid #d3d3d3;
+}
+
+ul.clientlists li:hover {
+    border: 5px solid var(--secondary-color);
+    box-shadow: 5px -5px rgba(0,0,0,0.3);
+}
+
+ul.clientlists li img {
+    width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    ul.clientlists li {
+        padding: 0.5rem 0.7rem;
+        margin: 0 3px;
+        border: 3px solid #d3d3d3;
+    }
+    
+    ul.clientlists li:hover {
+        border: 2px solid var(--secondary-color);
+        box-shadow: 2px -2px rgba(0,0,0,0.3);
+    }
+    
+    ul.clientlists li img {
+        width: 70px;
+    }
+}
+/*----------------- End Client Section -----------------------------*/
+
+
+/*----------------- Start Customer Section -----------------------------*/
+#customer {
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)), 
+                url("../assets/img/banner/banner3.jpg") no-repeat center center/cover;
+   
+}
+/*----------------- End Customer Section -----------------------------*/
+
+/*----------------- Start Request Section -----------------------------*/
+.quotes {
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -30px auto 0;
+    padding: 30px 50px;
+}
+.quotes .infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quotes .btn-calls {
+    width: 170px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    border: 0;
+    border-radius: 100px;
+    padding: 0;
+}
+.quotes .btn-calls:hover {
+    box-shadow: -3px -3px 3px #444;
+    transform: scale(0.98);
+}
+@media (max-width:501px) {
+    .quotes {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+/*----------------- End Request Section -----------------------------*/
+
+/*----------------- Start Furnitures Section -----------------------------*/
+.furicons img {
+    width: 70px;
+}
+.furicons div:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+/*----------------- End Furnitures Section -----------------------------*/
+
+/*----------------- Start Contact Section -----------------------------*/
+.contacts {
+    background: linear-gradient( 110deg,rgba(0,0,0,0.9) 50%, transparent 50%),
+                url("../assets/img/banner/banner3.jpg") no-repeat fixed center center;
+}
+.contacts .inputs {
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    color: #fff;
+    transition: all 0.8s ease;
+}
+.contacts .inputs:focus {
+    box-shadow: none;
+    border-bottom-color: var(--primary-color);
+}
+.contacts .submitbtns {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    transition: background 0.3s ease;
+}
+.contacts .submitbtns:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.labels {
+    color: #e2e2e2;
+    display: block;
+    margin-top: -60px;
+    margin-left: 12px;
+    transition: all 0.5s ease;
+}
+.inputs:placeholder-shown + .labels {
+    opacity: 0;
+    transform: translate(30px, 30px);
+}
+/*----------------- End Contact Section -----------------------------*/
+
+/*----------------- Start Footer Section -----------------------------*/
+.footerlinks {
+    text-decoration: none;
+    color: #e2e2e2;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+.footerlinks:hover {
+    color: orange;
+    letter-spacing: 1px;
+    border-bottom: 1px solid orange;
+}
+/*----------------- End Footer Section -----------------------------*/
